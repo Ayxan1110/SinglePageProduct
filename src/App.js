@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import { Theme, Box } from "@radix-ui/themes";
+import Product from './components/Product';
+import Header from './components/Header';
+import Description from './components/Description';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Theme>
+        <Box px={{initial: "20px", xs: "20px", sm: "40px", md: "50px", lg: "100px", xl: "100px"}} py={"20px"} style={{backgroundColor: "#dfdfdf"}}>
+          <Header />
+          <Product />
+        </Box>
+        <Description />
+      </Theme>
     </div>
   );
 }
